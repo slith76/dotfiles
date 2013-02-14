@@ -1,69 +1,52 @@
-# load our own completion functions
-fpath=(~/.zsh/completion $fpath)
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+PATH=$PATH:$HOME/.rvm/bin:/usr/local/bin # Add RVM to PATH for scripting
 
-for function in ~/.zsh/functions/*; do
-  source $function
-done
-
-# completion
-autoload -U compinit
-compinit
-
-# automatically enter directories without cd
-setopt auto_cd
-
-# use vim as an editor
-export EDITOR=vim
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="agnoster"
 
 # aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
-fi
+alias zshconfig="vi ~/.zshrc"
+alias ohmyzsh="vi ~/.oh-my-zsh"
+alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
+alias vi='/usr/local/bin/vim'
 
-# vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# use incremental search
-bindkey "^R" history-incremental-search-backward
+# Comment this out to disable bi-weekly auto-update checks
+DISABLE_AUTO_UPDATE="true"
 
-# add some readline keys back
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+export UPDATE_ZSH_DAYS=13
 
-# handy keybindings
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-# expand functions in the prompt
-setopt prompt_subst
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-# ignore duplicate history entries
-setopt histignoredups
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git osx ruby brew rvm history github)
 
-# keep TONS of history
-export HISTSIZE=4096
+source $ZSH/oh-my-zsh.sh
 
-# look for ey config in project dirs
-export EYRC=./.eyrc
+# Customize to your needs...
 
-# automatically pushd
-setopt auto_pushd
-export dirstacksize=5
 
-# awesome cd movements from zshkit
-setopt AUTOCD
-setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-setopt cdablevars
+## cdargs
+function cv () {
+           cdargs "$1" && cd "`cat "$HOME/.cdargsresult"`" ;
+       }
 
-# Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+#Powerline
+#. ~/.vim/bundle/powerline/bindings/zsh/powerline.zsh
 
-# Enable extended globbing
-setopt EXTENDED_GLOB
