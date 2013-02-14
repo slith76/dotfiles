@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-PATH=$PATH:$HOME/.rvm/bin:/usr/local/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -12,7 +12,7 @@ ZSH_THEME="agnoster"
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
-alias vi='/usr/local/bin/vim'
+#alias vi='/usr/local/bin/vim'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
