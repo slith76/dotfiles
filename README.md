@@ -15,9 +15,9 @@ Set zsh as your login shell.
 Install
 -------
 
-    	git clone git://github.com/slith76/dotfiles.git
+	git clone git://github.com/slith76/dotfiles.git
 	cd dotfiles
-    	./install.sh
+	./install.sh
 
 This will create symlinks for config files in your home directory. If you
 include the line "DO NOT EDIT BELOW THIS LINE" anywhere in a config file, it
