@@ -2,6 +2,7 @@ slith76 dotfiles
 ===================
 
 This are my dotfiles for vim, zsh ... and an automated install per install.sh.
+
 (thx https://github.com/thoughtbot/dotfiles)
 
 Requirements
@@ -28,6 +29,7 @@ You can safely run `./install.sh` multiple times to update.
 Credits
 -------
 
-Thank you, 
-
-![thoughtbot](http://thoughtbot.com/)
+Thx, 
+[thoughtbot](http://thoughtbot.com/)
+[vundle](https://github.com/gmarik/vundle)
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
