@@ -2,6 +2,7 @@ slith76 dotfiles
 ===================
 
 This are my dotfiles for vim, zsh ... and an automated install per install.sh.
+
 (thx https://github.com/thoughtbot/dotfiles)
 
 Requirements
@@ -14,9 +15,9 @@ Set zsh as your login shell.
 Install
 -------
 
-    	git clone git://github.com/slith76/dotfiles.git
+	git clone git://github.com/slith76/dotfiles.git
 	cd dotfiles
-    	./install.sh
+	./install.sh
 
 This will create symlinks for config files in your home directory. If you
 include the line "DO NOT EDIT BELOW THIS LINE" anywhere in a config file, it
@@ -28,6 +29,7 @@ You can safely run `./install.sh` multiple times to update.
 Credits
 -------
 
-Thank you, 
-
-![thoughtbot](http://thoughtbot.com/)
+Thx, 
+[thoughtbot](http://thoughtbot.com/)
+[vundle](https://github.com/gmarik/vundle)
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
