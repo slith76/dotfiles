@@ -42,5 +42,5 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ### VIM Plugin: https://github.com/Valloric/YouCompleteMe
 ## Mac: brew install cmake
 ## Ubuntu/Debian: apt-get install python-dev cmake
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+#cd ~/.vim/bundle/YouCompleteMe
+#./install.sh --clang-completer
