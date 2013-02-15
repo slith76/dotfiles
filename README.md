@@ -30,6 +30,7 @@ Credits
 -------
 
 Thx, 
-[thoughtbot](http://thoughtbot.com/)
-[vundle](https://github.com/gmarik/vundle)
-[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+* [thoughtbot](http://thoughtbot.com/)
+* [vundle](https://github.com/gmarik/vundle)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
