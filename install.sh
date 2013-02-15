@@ -34,6 +34,11 @@ for name in *; do
   fi
 done
 
+if [ ! -d "~/.vim/colors" ]; then
+        mkdir -p ~/.vim/colors/
+fi
+cp .vim/colors/* ~/.vim/colors/
+
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim +BundleInstall +qa
 
