@@ -33,5 +33,26 @@ Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 " Bundle 'Valloric/YouCompleteMe'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle "garbas/vim-snipmate"
 
-filetype plugin indent on     " required!
+filetype plugin indent on     	" required!
+
+" Shortcut to rapidly toggle `set list`
+nmap <S-l> :set list!<CR>	" Shift-l
+vmap <A-l> :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+if has("mac") || has("macunix")
+	nmap <D-l> <M-l>
+	imap <D-l> <M-l>
+	vmap <D-l> <M-l>
+endif
+
+" Theme Option
+"
+color blackboard 		" only works in gui-mode ?wtf?
