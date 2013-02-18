@@ -12,7 +12,10 @@ ZSH_THEME="agnoster"
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
-#alias vi='/usr/local/bin/vim'
+
+if [ `uname` = "Darwin" ]; then
+	alias vi='/usr/local/bin/vim'
+fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
