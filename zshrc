@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/python/ # Add RVM to PATH for scripting
 EDITOR=vim
 
 # Set name of the theme to load.
@@ -56,3 +56,6 @@ function cv () {
 #Powerline
 #. ~/.vim/bundle/powerline/bindings/zsh/powerline.zsh
 
+## Python/Virtualenv/Django-Settings
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/share/python/virtualenvwrapper.sh 
