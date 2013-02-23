@@ -15,6 +15,10 @@ alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
 #alias vi='/usr/local/bin/vim'
 alias mvserien="~/scripts/filemover.py -s /data/Serien -d /data/diskstation_video/TV\ Serien"
 
+if [ `uname` = "Darwin" ]; then
+	alias vi='/usr/local/bin/vim'
+fi
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
