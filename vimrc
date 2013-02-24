@@ -18,6 +18,7 @@ set history=100
 set ruler 		        " show the cursor position all the time
 set showcmd 			" display incomplete commands
 set incsearch			" do incremental searching
+set hlsearch
 
 " Plugins via vbundle
 "
