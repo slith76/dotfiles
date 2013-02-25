@@ -20,6 +20,7 @@ if [ `uname` = "Darwin" ]; then
 	alias vi='/usr/local/bin/vim'
 	EDITOR=/usr/local/bin/vim
 	GIT_EDITOR=/usr/local/bin/vim
+	. `brew --prefix`/etc/profile.d/z.sh
 fi
 
 # Set to this to use case-sensitive completion
