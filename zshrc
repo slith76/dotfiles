@@ -21,7 +21,7 @@ if [ `uname` = "Darwin" ]; then
 	EDITOR=/usr/local/bin/vim
 	GIT_EDITOR=/usr/local/bin/vim
 	. `brew --prefix`/etc/profile.d/z.sh
-	PATH = PATH:/Users/olif/Documents/adt-bundle-mac/sdk/platform-tools	
+	PATH=$PATH:/Users/olif/Documents/adt-bundle-mac/sdk/platform-tools	
 fi
 
 # Set to this to use case-sensitive completion
