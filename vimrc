@@ -26,20 +26,26 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'tpope/vim-rails.git'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'Valloric/YouCompleteMe'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
-Bundle "garbas/vim-snipmate"
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim"
+"Bundle "honza/snipmate-snippets"
+"Bundle "garbas/vim-snipmate"
+Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key = '<Leader>'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on     	" required!
+
+" Shortcut definitions
+
+let mapleader = ","
 
 " Shortcut to rapidly toggle `set list`
 nmap <S-l> :set list!<CR>	" Shift-l
