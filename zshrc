@@ -16,6 +16,24 @@ alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
 #alias vi='/usr/local/bin/vim'
 alias mvserien="~/scripts/filemover.py -s /data/Serien -d /data/diskstation_video/TV\ Serien"
 alias feature="git checkout -b"
+alias mwm="merge_with_master"
+
+
+function merge_with_master {
+    branch_name=$(git branch | grep "*" | sed "s/* //")
+    test $branch_name = "master" &&\
+    echo "Already on master, checkout your feature branch" && return
+    git checkout master
+    grep "origin" .git/config > /dev/null && git pull
+    git merge --ff-only $branch_name && git branch -d $branch_name \
+            && echo "You can now 'git push' your code" && return || \
+            git checkout $branch_name
+    echo "Your are behind master, a clean Merge is not possible!"
+    echo -n "Should I rebase it with master and try it again? (y/n) "
+    read ANSWER
+    [[ -n `echo $ANSWER | grep '^[jyJY]'` ]] && \
+            git rebase master && merge_with_master
+}
 
 if [ `uname` = "Darwin" ]; then
 	alias vi='/usr/local/bin/vim'
