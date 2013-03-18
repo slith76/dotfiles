@@ -40,6 +40,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader>'
 Bundle 'tpope/vim-surround'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on     	" required!
 

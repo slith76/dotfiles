@@ -15,6 +15,7 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
 #alias vi='/usr/local/bin/vim'
 alias mvserien="~/scripts/filemover.py -s /data/Serien -d /data/diskstation_video/TV\ Serien"
+alias feature="git checkout -b"
 
 if [ `uname` = "Darwin" ]; then
 	alias vi='/usr/local/bin/vim'
