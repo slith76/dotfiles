@@ -81,4 +81,4 @@ function cv () {
 
 ## Python/Virtualenv/Django-Settings
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/share/python/virtualenvwrapper.sh 
+#source /usr/local/share/python/virtualenvwrapper.sh 
