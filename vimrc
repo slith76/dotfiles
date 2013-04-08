@@ -64,3 +64,9 @@ endif
 " Theme Option
 "
 color blackboard 		" only works in gui-mode ?wtf?
+
+" Autostart
+"
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * wincmd w
