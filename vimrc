@@ -71,3 +71,10 @@ color blackboard 		" only works in gui-mode ?wtf?
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter * wincmd w
+
+" GitCutter
+"
+let g:gitgutter_enabled = 1
+
+nmap gh <Plug>GitGutterNextHunk
+nmap gH <Plug>GitGutterPrevHunk
