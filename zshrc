@@ -39,7 +39,7 @@ if [ `uname` = "Darwin" ]; then
 	alias vi='/usr/local/bin/vim'
 	EDITOR=/usr/local/bin/vim
 	GIT_EDITOR=/usr/local/bin/vim
-	. `brew --prefix`/etc/profile.d/z.sh
+	#. `brew --prefix`/etc/profile.d/z.sh
 	PATH=$PATH:/Users/olif/Documents/adt-bundle-mac/sdk/platform-tools	
 fi
 
