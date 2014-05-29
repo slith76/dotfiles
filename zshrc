@@ -8,7 +8,7 @@ EDITOR=vim
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="agnoster"
-ZSH_THEME="bureau"
+ZSH_THEME="gentoo"
 
 # aliases
 alias zshconfig="vi ~/.zshrc"
@@ -83,3 +83,7 @@ function cv () {
 ## Python/Virtualenv/Django-Settings
 export WORKON_HOME=$HOME/.virtualenvs
 #source /usr/local/share/python/virtualenvwrapper.sh 
+
+#GO
+export GOPATH="/Users/olif/Projekte/go"
+
