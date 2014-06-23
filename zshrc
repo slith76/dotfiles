@@ -87,3 +87,21 @@ export WORKON_HOME=$HOME/.virtualenvs
 #GO
 export GOPATH="/Users/olif/Projekte/go"
 
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/olif/google-cloud-sdk/path.zsh.inc
+
+# # The next line enables bash completion for gcloud.
+# source /Users/olif/google-cloud-sdk/completion.bash.inc
+
+case `uname` in
+	  Darwin)
+	      #alias ls='ls -FG'
+	      #echo "Darwin"
+	      /usr/local/bin/archey -c
+          ;;
+          Linux)
+	      #alias ls='ls -F --color=auto'
+	      echo "Linux"
+	  ;;
+esac
+
