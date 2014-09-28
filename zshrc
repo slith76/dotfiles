@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/python/ # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/python/:$HOME/bin # Add RVM to PATH for scripting
 EDITOR=vim
 
 # Set name of the theme to load.
@@ -105,3 +105,4 @@ case `uname` in
 	  ;;
 esac
 
+#source /usr/local/opt/autoenv/activate.sh
