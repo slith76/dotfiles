@@ -6,6 +6,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'rking/ag.vim'
+Bundle 'sjl/gundo.vim'
 
 " Bundle 'tpope/vim-fugitive'
 " "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -26,6 +28,8 @@ Bundle 'flazz/vim-colorschemes'
 
 " Shortcut for open nerdtree
 nnoremap <F5> :NERDTreeToggle<CR>
+" Shortcut for gundo
+nnoremap <F6> :GundoToggle<CR>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
