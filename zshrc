@@ -99,9 +99,9 @@ case `uname` in
 	      #echo "Darwin"
 	      /usr/local/bin/archey -c
           ;;
-          #Linux)
+          Linux)
 	      #alias ls='ls -F --color=auto'
-	      echo "Linux"
+	      #echo "Linux"
 	  ;;
 esac
 
