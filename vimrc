@@ -8,78 +8,72 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+" shortcut 'gc'
+Bundle 'tpope/vim-commentary'
 
-" Bundle 'tpope/vim-fugitive'
-" "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" "Bundle 'tpope/vim-rails.git'
-" "Bundle 'L9'
-" "Bundle 'FuzzyFinder'
-" "Bundle 'Valloric/YouCompleteMe'
-" "Bundle "MarcWeber/vim-addon-mw-utils"
-" "Bundle "tomtom/tlib_vim"
-" "Bundle "honza/snipmate-snippets"
-" "Bundle "garbas/vim-snipmate"
-" Bundle 'Lokaltog/vim-easymotion'
-" let g:EasyMotion_leader_key = '<Leader>'
-" Bundle 'tpope/vim-surround'
-" Bundle 'ervandew/supertab'
-" Bundle 'airblade/vim-gitgutter'"
+" shortcut for open nerdtree
+nnoremap <f5> :NERDTreeToggle<cr>
+" shortcut for gundo
+nnoremap <f6> :GundoToggle<cr>
 
-
-" Shortcut for open nerdtree
-nnoremap <F5> :NERDTreeToggle<CR>
-" Shortcut for gundo
-nnoremap <F6> :GundoToggle<CR>
-
-" Automatic reloading of .vimrc
+" automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" let nerdtree filter *.pyc files
+let NERDTreeIgnore = ['\.pyc$']
 
-" Better copy & paste
-" When you want to paste large blocks of code into vim, press F2 before you
-" paste. At the bottom you should see ``-- INSERT (paste) --``.
 
-set pastetoggle=<F2>
+" better copy & paste
+" when you want to paste large blocks of code into vim, press f2 before you
+" paste. at the bottom you should see ``-- insert (paste) --``.
+
+set pastetoggle=<f2>
 set clipboard=unnamed
 
 
-" Mouse and backspace
-set mouse=a  " on OSX press ALT and click
+" mouse and backspace
+set mouse=a  " on osx press alt and click
 set bs=2     " make backspace behave like normal again
 
 
-" Rebind <Leader> key
-" I like to have it here becuase it is easier to reach than the default and
-" it is next to ``m`` and ``n`` which I use for navigating between tabs.
+" rebind <leader> key
+" i like to have it here becuase it is easier to reach than the default and
+" it is next to ``m`` and ``n`` which i use for navigating between tabs.
 let mapleader = ","
 
 
-" Bind nohl
-" Removes highlight of your last search
-" ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+" bind nohl
+" removes highlight of your last search
+" ``<c>`` stands for ``ctrl`` and therefore ``<c-n>`` stands for ``ctrl+n``
+noremap <c-n> :nohl<cr>
+vnoremap <c-n> :nohl<cr>
+inoremap <c-n> :nohl<cr>
 
 
-" Quicksave command
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
+" quicksave command
+noremap <c-z> :update<cr>
+vnoremap <c-z> <c-c>:update<cr>
+inoremap <c-z> <c-o>:update<cr>
 
 
-" Quick quit command
-noremap <Leader>e :quit<CR>  " Quit current window
-noremap <Leader>E :qa!<CR>   " Quit all windows
+" quick quit command
+noremap <leader>e :quit<cr>  " quit current window
+noremap <leader>e :qa!<cr>   " quit all windows
 
-" Custom unvisibles
+" custom unvisibles
 set list
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
-" Every unnecessary keystroke that can be saved is good for your health :)
+" bind ctrl+<movement> keys to move around the windows, instead of using ctrl+w + <movement>
+" every unnecessary keystroke that can be saved is good for your health :)
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -87,62 +81,62 @@ map <c-h> <c-w>h
 
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <leader>n <esc>:tabprevious<cr>
+map <leader>m <esc>:tabnext<cr>
 
 
 " map sort function to a key
-vnoremap <Leader>s :sort<CR>
+vnoremap <leader>s :sort<cr>
 
 
 " easier moving of code blocks
-" Try to go into visual mode (v), thenselect several lines of code here and
+" try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 
-" Show whitespace
-" MUST be inserted BEFORE the colorscheme command
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+" show whitespace
+" must be inserted before the colorscheme command
+autocmd colorscheme * highlight extrawhitespace ctermbg=red guibg=red
+au insertleave * match extrawhitespace /\s\+$/
 
 
-" Color scheme
+" color scheme
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-"set t_Co=256
+" wget -o wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+"set t_co=256
 "color wombat256mod
-colorscheme jellybeans
+colorscheme 256-jungle
 
 
-" Enable syntax highlighting
-" You need to reload this file for the change to apply
+" enable syntax highlighting
+" you need to reload this file for the change to apply
 filetype off
 filetype plugin indent on
 syntax on
 
 
-" Showing line numbers and length
+" showing line numbers and length
 set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=80
-highlight ColorColumn ctermbg=233
+highlight colorcolumn ctermbg=233
 
 
 " easier formatting of paragraphs
-"" vmap Q gq
-"" nmap Q gqap
+"" vmap q gq
+"" nmap q gqap
 
 
-" Useful settings
+" useful settings
 set history=700
 set undolevels=700
 
 
-" Real programmers don't use TABs but spaces
+" real programmers don't use tabs but spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -150,39 +144,39 @@ set shiftround
 set expandtab
 
 
-" Make search case insensitive
+" make search case insensitive
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 
 
-" Disable stupid backup and swap files - they trigger too many events
+" disable stupid backup and swap files - they trigger too many events
 " for file system watchers
 set nobackup
 set nowritebackup
 set noswapfile
 
 
-" Setup Pathogen to manage your plugins
+" setup pathogen to manage your plugins
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-" Now you can install any plugin into a .vim/bundle/plugin-name/ folder
+" now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
 
 
 " ============================================================================
-" Python IDE Setup
+" python ide setup
 " ============================================================================
 
 
-" Settings for vim-powerline
+" settings for vim-powerline
 " cd ~/.vim/bundle
-" git clone git://github.com/Lokaltog/vim-powerline.git
+" git clone git://github.com/lokaltog/vim-powerline.git
 set laststatus=2
 
 
-" Settings for ctrlp
+" settings for ctrlp
 " cd ~/.vim/bundle
 " git clone https://github.com/kien/ctrlp.vim.git
 "" let g:ctrlp_max_height = 30
@@ -191,12 +185,12 @@ set laststatus=2
 "" set wildignore+=*/coverage/*
 
 
-" Settings for python-mode
-" Note: I'm no longer using this. Leave this commented out
+" settings for python-mode
+" note: i'm no longer using this. leave this commented out
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"" map <Leader>g :call RopeGotoDefinition()<CR>
+"" map <leader>g :call ropegotodefinition()<cr>
 "" let ropevim_enable_shortcuts = 1
 "" let g:pymode_rope_goto_def_newwin = "vnew"
 "" let g:pymode_rope_extended_complete = 1
@@ -204,35 +198,52 @@ set laststatus=2
 "" let g:pymode_syntax = 1
 "" let g:pymode_syntax_builtin_objs = 0
 "" let g:pymode_syntax_builtin_funcs = 0
-"" map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"" map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
-" Settings for jedi-vim
+" settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
 "" let g:jedi#usages_command = "<leader>z"
 "" let g:jedi#popup_on_dot = 0
 "" let g:jedi#popup_select_first = 0
-"" map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"" map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
-" Better navigating through omnicomplete option list
-" See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
+" better navigating through omnicomplete option list
+" see http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
 "" set completeopt=longest,menuone
-"" function! OmniPopup(action)
+"" function! omnipopup(action)
 ""     if pumvisible()
 ""         if a:action == 'j'
-""             return "\<C-N>"
+""             return "\<c-n>"
 ""         elseif a:action == 'k'
-""             return "\<C-P>"
+""             return "\<c-p>"
 ""         endif
 ""     endif
 ""     return a:action
 "" endfunction
 
-"" inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
-"" inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+"" inoremap <silent><c-j> <c-r>=omnipopup('j')<cr>
+"" inoremap <silent><c-k> <c-r>=omnipopup('k')<cr>
 
 
-" Python folding
+" python folding
 " mkdir -p ~/.vim/ftplugin
-" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+" wget -o ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
+
+" unmap the arrow keys
+no <up> <nop>
+no <down> <nop>
+no <left> <nop>
+no <right> <nop>
+ino <down> <nop>
+ino <up> <nop>
+ino <left> <nop>
+ino <right> <nop>
+
+map <s-up> ddkp
+map <s-k> ddkp
+map <s-down> ddp
+map <s-j> ddp
+
+
