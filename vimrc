@@ -4,7 +4,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
@@ -16,6 +16,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 " shortcut 'gc'
 Bundle 'tpope/vim-commentary'
+" Git integration
+Bundle 'tpope/vim-fugitive'
+let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
 
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
@@ -24,10 +27,17 @@ nnoremap <f6> :GundoToggle<cr>
 
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
+map <leader>a <C-a>h :w<CR>
 
 " let nerdtree filter *.pyc files
 let NERDTreeIgnore = ['\.pyc$']
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+autocmd Filetype html nnoremap <leader>c I<!--<esc>A--><esc>
+autocmd Filetype javascript nnoremap <leader>c I//<esc>>
+
+set encoding=utf-8
 
 " better copy & paste
 " when you want to paste large blocks of code into vim, press f2 before you
@@ -35,6 +45,20 @@ let NERDTreeIgnore = ['\.pyc$']
 
 set pastetoggle=<f2>
 set clipboard=unnamed
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_theme="jellybeans"
+let g:airline_powerline_fonts=1
+let g:airline_section_b = '%{fugitive#statusline()}'
+let g:airline_section_c = '%{getcwd()} :: %t'
+
 
 
 " mouse and backspace
@@ -103,11 +127,8 @@ au insertleave * match extrawhitespace /\s\+$/
 
 
 " color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -o wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-"set t_co=256
-"color wombat256mod
-colorscheme 256-jungle
+set t_Co=256
+colorscheme jellybeans
 
 
 " enable syntax highlighting
@@ -179,10 +200,10 @@ set laststatus=2
 " settings for ctrlp
 " cd ~/.vim/bundle
 " git clone https://github.com/kien/ctrlp.vim.git
-"" let g:ctrlp_max_height = 30
-"" set wildignore+=*.pyc
-"" set wildignore+=*_build/*
-"" set wildignore+=*/coverage/*
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
 
 
 " settings for python-mode
@@ -232,18 +253,24 @@ set laststatus=2
 set nofoldenable
 
 " unmap the arrow keys
-no <up> <nop>
-no <down> <nop>
-no <left> <nop>
-no <right> <nop>
-ino <down> <nop>
-ino <up> <nop>
-ino <left> <nop>
-ino <right> <nop>
+"no <up> <nop>
+"no <down> <nop>
+"no <left> <nop>
+"no <right> <nop>
+"ino <down> <nop>
+"ino <up> <nop>
+"ino <left> <nop>
+"ino <right> <nop>
 
 map <s-up> ddkp
 map <s-k> ddkp
 map <s-down> ddp
 map <s-j> ddp
+
+set cursorline
+hi CursorLine cterm=NONE ctermbg=234 ctermfg=NONE
+
+"let g:Powerline_symbols = 'fancy'
+
 
 
