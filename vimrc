@@ -19,6 +19,9 @@ Bundle 'tpope/vim-commentary'
 " Git integration
 Bundle 'tpope/vim-fugitive'
 let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
+" Plugin for Autocompletion
+Bundle 'davidhalter/jedi-vim'
+Bundle 'klen/python-mode'
 
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
@@ -211,23 +214,23 @@ set wildignore+=*/coverage/*
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"" map <leader>g :call ropegotodefinition()<cr>
-"" let ropevim_enable_shortcuts = 1
-"" let g:pymode_rope_goto_def_newwin = "vnew"
-"" let g:pymode_rope_extended_complete = 1
-"" let g:pymode_breakpoint = 0
-"" let g:pymode_syntax = 1
-"" let g:pymode_syntax_builtin_objs = 0
-"" let g:pymode_syntax_builtin_funcs = 0
-"" map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
+map <leader>g :call ropegotodefinition()<cr>
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakpoint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
 " settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
-"" let g:jedi#usages_command = "<leader>z"
-"" let g:jedi#popup_on_dot = 0
-"" let g:jedi#popup_select_first = 0
-"" map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
+let g:jedi#usages_command = "<leader>z"
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
 " better navigating through omnicomplete option list
 " see http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
