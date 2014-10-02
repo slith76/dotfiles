@@ -10,7 +10,12 @@ Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
+"Bundle 'garbas/vim-snipmate'
+Bundle 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
 Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
@@ -22,6 +27,28 @@ let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
 " Plugin for Autocompletion
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
+Bundle 'Valloric/YouCompleteMe'
+" !  brew install cmake
+" !  cd ~/.vim/bundle/YouCompleteMe
+" !  ./install.sh --clang-completer
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
+"
+" Plugin for sessions
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
+"let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+" Plugin auto-pairs
+Bundle 'jiangmiao/auto-pairs'
+
+Bundle 'sukima/xmledit'
+
 
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
