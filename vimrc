@@ -28,7 +28,8 @@ let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
 Bundle 'Valloric/YouCompleteMe'
-" !  brew install cmake
+" !  Mac: brew install cmake
+" !  Linux: apt-get install build-essential cmake python-dev
 " !  cd ~/.vim/bundle/YouCompleteMe
 " !  ./install.sh --clang-completer
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -67,7 +68,12 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd Filetype html nnoremap <leader>c I<!--<esc>A--><esc>
 autocmd Filetype javascript nnoremap <leader>c I//<esc>>
 
+
 set encoding=utf-8
+set wildmenu
+set hidden
+
+
 
 " better copy & paste
 " when you want to paste large blocks of code into vim, press f2 before you
@@ -124,6 +130,7 @@ noremap <leader>e :qa!<cr>   " quit all windows
 set list
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
+nmap <leader>l :set list!<CR>
 
 
 " bind ctrl+<movement> keys to move around the windows, instead of using ctrl+w + <movement>
@@ -158,7 +165,7 @@ au insertleave * match extrawhitespace /\s\+$/
 
 " color scheme
 set t_Co=256
-colorscheme jellybeans
+colorscheme jellybeans-olif
 
 
 " enable syntax highlighting
@@ -261,21 +268,20 @@ map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
 " better navigating through omnicomplete option list
 " see http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
-"" set completeopt=longest,menuone
-"" function! omnipopup(action)
-""     if pumvisible()
-""         if a:action == 'j'
-""             return "\<c-n>"
-""         elseif a:action == 'k'
-""             return "\<c-p>"
-""         endif
-""     endif
-""     return a:action
-"" endfunction
+set completeopt=longest,menuone
+function! Omnipopup(action)
+     if pumvisible()
+         if a:action == 'j'
+             return "\<c-n>"
+         elseif a:action == 'k'
+             return "\<c-p>"
+         endif
+     endif
+     return a:action
+endfunction
 
-"" inoremap <silent><c-j> <c-r>=omnipopup('j')<cr>
-"" inoremap <silent><c-k> <c-r>=omnipopup('k')<cr>
-
+inoremap <silent><c-j> <c-r>=Omnipopup('j')<cr>
+inoremap <silent><c-k> <c-r>=Omnipopup('k')<cr>
 
 " python folding
 " mkdir -p ~/.vim/ftplugin
@@ -302,5 +308,10 @@ hi CursorLine cterm=NONE ctermbg=234 ctermfg=NONE
 
 "let g:Powerline_symbols = 'fancy'
 
-
-
+" Snippets
+"
+inoreabbrev teh the
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
