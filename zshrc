@@ -18,6 +18,24 @@ alias octoupdate='rake generate && git add . && git commit -m "Post Update" &'
 alias mvserien="~/scripts/filemover.py -s /data/Serien -d /data/diskstation_video/TV\ Serien"
 alias feature="git checkout -b"
 alias mwm="merge_with_master"
+# cd
+alias ..='cd ..'
+
+# git-shortcuts
+alias git="LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 git"
+alias ga="git add"
+alias g.="git add . && git status"
+alias gb='git branch'
+alias gc='git commit'
+alias gco='git checkout'
+alias gd="git diff"
+alias gl="git log --pretty=oneline"
+alias gp='git push'
+alias gpl="git pull"
+alias gs="git status"
+alias gst="git stash"
+alias feature="git checkout -b"
+alias mwm="merge_with_master"
 
 
 function merge_with_master {

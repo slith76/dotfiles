@@ -50,6 +50,8 @@ Bundle 'jiangmiao/auto-pairs'
 
 Bundle 'sukima/xmledit'
 
+" Plugin for Ack (better fgrep)
+Bundle 'mileszs/ack.vim'
 
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
