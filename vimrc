@@ -53,6 +53,9 @@ Bundle 'sukima/xmledit'
 " Plugin for Ack (better fgrep)
 Bundle 'mileszs/ack.vim'
 
+" Plugin for TabEdit
+Bundle "godlygeek/tabular"
+
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
 " shortcut for gundo
