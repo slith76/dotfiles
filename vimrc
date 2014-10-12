@@ -300,10 +300,12 @@ set nofoldenable
 "ino <left> <nop>
 "ino <right> <nop>
 
-map <s-up> ddkp
-map <s-k> ddkp
-map <s-down> ddp
-map <s-j> ddp
+" Bubble single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+" Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]`]]`"
 
 set cursorline
 hi CursorLine cterm=NONE ctermbg=234 ctermfg=NONE
