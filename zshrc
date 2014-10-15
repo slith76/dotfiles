@@ -27,6 +27,7 @@ alias ga="git add"
 alias g.="git add . && git status"
 alias gb='git branch'
 alias gc='git commit'
+alias gca='git commit -am'
 alias gco='git checkout'
 alias gd="git diff"
 alias gl="git log --pretty=oneline"

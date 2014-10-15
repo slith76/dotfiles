@@ -27,6 +27,9 @@ let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
 " Plugin for Autocompletion
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
+" Override go-to.definition key shortcut to Ctrl-]
+" let g:pymode_rope_goto_definition_bind = "<C-]>"
+
 Bundle 'Valloric/YouCompleteMe'
 " !  Mac: brew install cmake
 " !  Linux: apt-get install build-essential cmake python-dev
@@ -55,6 +58,9 @@ Bundle 'mileszs/ack.vim'
 
 " Plugin for TabEdit
 Bundle "godlygeek/tabular"
+
+" Plugin for visual selecting ({}) with viv
+Bundle "gorkunov/smartpairs.vim"
 
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
