@@ -46,3 +46,8 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ## Ubuntu/Debian: apt-get install python-dev cmake
 #cd ~/.vim/bundle/YouCompleteMe
 #./install.sh --clang-completer
+
+# add Fuzzy finder for the shell
+cd ~/
+git clone https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install

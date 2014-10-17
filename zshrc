@@ -125,3 +125,4 @@ case `uname` in
 esac
 
 #source /usr/local/opt/autoenv/activate.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

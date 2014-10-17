@@ -11,12 +11,15 @@ Bundle 'sjl/gundo.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 "Bundle 'garbas/vim-snipmate'
+
+" Snippets
 Bundle 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger       = "<c-j>"
+Bundle 'honza/vim-snippets'
+let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
-Bundle 'honza/vim-snippets'
+
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 " shortcut 'gc'
@@ -38,8 +41,9 @@ Bundle 'Valloric/YouCompleteMe'
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
-let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_comments = 0 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_key_list_select_completion = ['<Down>']
 "
 " Plugin for sessions
 Bundle 'xolox/vim-misc'
