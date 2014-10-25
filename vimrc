@@ -66,10 +66,18 @@ Bundle "godlygeek/tabular"
 " Plugin for visual selecting ({}) with viv
 Bundle "gorkunov/smartpairs.vim"
 
+" Plugin for visual indent guidline
+Bundle "nathanaelkane/vim-indent-guides"
+
+" Plugin for tags
+Bundle "majutsushi/tagbar"
+
 " shortcut for open nerdtree
 nnoremap <f5> :NERDTreeToggle<cr>
 " shortcut for gundo
 nnoremap <f6> :GundoToggle<cr>
+" shortcut for Tagbar
+nnoremap <C-f5> :TagbarToggle<cr>
 
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %

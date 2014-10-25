@@ -104,7 +104,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 #source /usr/local/share/python/virtualenvwrapper.sh 
 
 #GO
-#export GOPATH="/Users/olif/Projekte/go"
+export GOPATH="/Users/olif/Projekte/go"
 
 # The next line updates PATH for the Google Cloud SDK.
 #source /Users/olif/google-cloud-sdk/path.zsh.inc
