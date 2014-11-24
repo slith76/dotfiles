@@ -77,7 +77,7 @@ nnoremap <f5> :NERDTreeToggle<cr>
 " shortcut for gundo
 nnoremap <f6> :GundoToggle<cr>
 " shortcut for Tagbar
-nnoremap <C-f5> :TagbarToggle<cr>
+nnoremap <leader><f5> :TagbarToggle<cr>
 
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -140,9 +140,9 @@ inoremap <c-n> :nohl<cr>
 
 
 " quicksave command
-noremap <c-z> :update<cr>
-vnoremap <c-z> <c-c>:update<cr>
-inoremap <c-z> <c-o>:update<cr>
+noremap <c-s> :update<cr>
+vnoremap <c-s> <c-c>:update<cr>
+inoremap <c-s> <c-o>:update<cr>
 
 
 " quick quit command
@@ -188,7 +188,7 @@ au insertleave * match extrawhitespace /\s\+$/
 
 " color scheme
 set t_Co=256
-colorscheme jellybeans-olif
+colorscheme jellybeans
 
 
 " enable syntax highlighting

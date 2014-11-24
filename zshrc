@@ -61,6 +61,19 @@ if [ `uname` = "Darwin" ]; then
 	GIT_EDITOR=/usr/local/bin/vim
 	#. `brew --prefix`/etc/profile.d/z.sh
 	PATH=$PATH:/Users/olif/Documents/adt-bundle-mac/sdk/platform-tools	
+
+    #fix for problems with ruby and vim
+    #https://docwhat.org/os-x-vim-with-ruby-crashes/
+    #for i in /usr/local/opt/vim/bin/*(N) /usr/local/opt/macvim/bin/*(N); do
+    #    i=$(basename $i)
+    #        alias "${i}"="env -u GEM_PATH -u GEM_HOME command ${i}"
+    #done
+    #export GIT_EDITOR="env -u GEM_PATH -u GEM_HOME vim +1"
+    #export EDITOR="env -u GEM_PATH -u GEM_HOME vim"
+    #alias vi="env -u GEM_PATH -u GEM_HOME command vim"
+    #alias vim="env -u GEM_PATH -u GEM_HOME command vim"
+    #alias vimdiff="env -u GEM_PATH -u GEM_HOME command vimdiff"
+    #alias vimtutor="env -u GEM_PATH -u GEM_HOME command vimtutor"
 fi
 
 # Set to this to use case-sensitive completion
@@ -126,3 +139,4 @@ esac
 
 #source /usr/local/opt/autoenv/activate.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
