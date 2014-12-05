@@ -140,3 +140,7 @@ esac
 #source /usr/local/opt/autoenv/activate.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# ansible env
+export ANSIBLE_HOSTS=$VIRTUAL_ENV/../hosts
+export ANSIBLE_HOST_KEY_CHECKING=False
+
