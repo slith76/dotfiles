@@ -157,6 +157,7 @@ set hidden
 
 
 
+
 " better copy & paste
 " when you want to paste large blocks of code into vim, press f2 before you
 " paste. at the bottom you should see ``-- insert (paste) --``.
@@ -338,7 +339,6 @@ let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
-map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
 " settings for jedi-vim
 " cd ~/.vim/bundle
@@ -346,7 +346,7 @@ map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
-map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
+" map <leader>b oimport ipdb; ipdb.set_trace() # breakpoint<c-c>
 
 " better navigating through omnicomplete option list
 " see http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
@@ -399,3 +399,6 @@ cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
+
+" shortcut for buffer switch with CtrlP
+nnoremap <leader>b :CtrlPBuffer<cr>
