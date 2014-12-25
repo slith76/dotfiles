@@ -10,6 +10,7 @@ Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+Bundle 'mattn/emmet-vim'
 "Bundle 'garbas/vim-snipmate'
 
 " Snippets
