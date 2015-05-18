@@ -165,6 +165,7 @@ set hidden
 
 set pastetoggle=<f2>
 set clipboard=unnamed
+map <C-x> :set paste!<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -403,3 +404,17 @@ cnoreabbrev Q q
 
 " shortcut for buffer switch with CtrlP
 nnoremap <leader>b :CtrlPBuffer<cr>
+
+" map for jump to tag
+nnoremap ü <C-]>
+nnoremap Ü <C-O>
+
+" open :help in vertical split window
+cnoremap help vert help
+
+map <Leader>v :vs ~/.vimrc <cr>
+map <Leader>c :XtermColorTable <cr>
+
+" unmap F1 help
+nmap <F1> <nop>
+imap <F1> <nop>
