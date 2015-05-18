@@ -12,6 +12,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'mattn/emmet-vim'
 "Bundle 'garbas/vim-snipmate'
+Bundle 'guns/xterm-color-table.vim'
 
 " Snippets
 Bundle 'SirVer/ultisnips'
@@ -413,7 +414,12 @@ nnoremap Ü <C-O>
 cnoremap help vert help
 
 map <Leader>v :vs ~/.vimrc <cr>
-map <Leader>c :XtermColorTable <cr>
+
+function! COLORTABLE()
+    :VXtermColorTable
+endfunction
+
+map <Leader>c :call COLORTABLE()<cr>
 
 " unmap F1 help
 nmap <F1> <nop>
