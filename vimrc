@@ -27,8 +27,9 @@ Bundle 'tpope/vim-repeat'
 " shortcut 'gc'
 Bundle 'tpope/vim-commentary'
 " Git integration
-Bundle 'tpope/vim-fugitive'
-let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
+"Bundle 'tpope/vim-fugitive'
+"let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
+Bundle 'lambdalisue/vim-gita'
 " Plugin for Autocompletion
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
@@ -178,7 +179,7 @@ endif
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme="jellybeans"
 let g:airline_powerline_fonts=1
-let g:airline_section_b = '%{fugitive#statusline()}'
+"let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline_section_c = '%{getcwd()} :: %t'
 
 
@@ -424,3 +425,6 @@ map <Leader>c :call COLORTABLE()<cr>
 " unmap F1 help
 nmap <F1> <nop>
 imap <F1> <nop>
+
+"spell checking
+"setlocal spell spelllang=en_us
