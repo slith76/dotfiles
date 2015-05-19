@@ -27,9 +27,9 @@ Bundle 'tpope/vim-repeat'
 " shortcut 'gc'
 Bundle 'tpope/vim-commentary'
 " Git integration
-"Bundle 'tpope/vim-fugitive'
-"let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
-Bundle 'lambdalisue/vim-gita'
+Bundle 'tpope/vim-fugitive'
+let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
+"Bundle 'lambdalisue/vim-gita'
 " Plugin for Autocompletion
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
@@ -51,7 +51,7 @@ Bundle 'klen/python-mode'
 Bundle 'Shougo/neocomplete'
 
 " Disable AutoComplPop.
-let g:acp_enableAtStartup = 0 
+let g:acp_enableAtStartup = 0
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
@@ -179,10 +179,9 @@ endif
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme="jellybeans"
 let g:airline_powerline_fonts=1
-"let g:airline_section_b = '%{fugitive#statusline()}'
+let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline_section_c = '%{getcwd()} :: %t'
-
-
+set noshowmode
 
 " mouse and backspace
 set mouse=a  " on osx press alt and click
