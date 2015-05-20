@@ -1,0 +1,5 @@
+" emmet-vim - emmet for vim
+
+Bundle 'mattn/emmet-vim'
+
+" vim:ft=vim

@@ -1,0 +1,5 @@
+" vim-indent-guides
+
+Bundle "nathanaelkane/vim-indent-guides"
+
+" vim:ft=vim

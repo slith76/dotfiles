@@ -1,0 +1,8 @@
+" tagbar - displays tags in a window, ordered by scope
+
+Bundle 'majutsushi/tagbar'
+
+" shortcut for Tagbar
+nnoremap <leader><f5> :TagbarToggle<cr>
+
+" vim:ft=vim

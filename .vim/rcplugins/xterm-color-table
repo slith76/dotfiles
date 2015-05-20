@@ -1,0 +1,6 @@
+" xterm-color-table.vim - All 256 xterm colors with their RGB equivalents, 
+"                         right in Vim!
+
+Bundle 'guns/xterm-color-table.vim'
+
+" vim:ft=vim

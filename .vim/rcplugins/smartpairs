@@ -1,0 +1,5 @@
+" smartpairs - Plugin for visual selecting ({}) with viv
+
+Bundle "gorkunov/smartpairs.vim"
+
+" vim:ft=vim

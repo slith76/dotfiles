@@ -1,0 +1,5 @@
+" auto-pairs -  insert or delete brackets, parens, quotes in pair
+
+Bundle 'jiangmiao/auto-pairs'
+
+" vim:ft=vim

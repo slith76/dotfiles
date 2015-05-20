@@ -1,0 +1,5 @@
+" vim-repeat - repeat.vim: enable repeating supported plugin maps with "."
+
+Bundle 'tpope/vim-repeat'
+
+" vim:ft=vim

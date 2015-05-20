@@ -1,0 +1,5 @@
+" jedi-vim - Using the jedi autocompletion library for VIM.
+
+Bundle 'davidhalter/jedi-vim'
+
+" vim:ft=vim

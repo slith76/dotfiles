@@ -1,0 +1,7 @@
+" vim-fugitive - a Git wrapper
+
+Bundle 'tpope/vim-fugitive'
+
+let g:fugitive_git_executable="LC_ALL=en_US.UTF-8 git"
+
+" vim:ft=vim

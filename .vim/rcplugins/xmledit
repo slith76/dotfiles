@@ -1,0 +1,5 @@
+" xmledit - A filetype plugin for VIM to help edit XML files
+
+Bundle 'sukima/xmledit'
+
+" vim:ft=vim

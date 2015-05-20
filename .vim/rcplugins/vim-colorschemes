@@ -1,0 +1,5 @@
+" vim-colorschemes - one stop shop for vim colorschemes.
+
+Bundle 'flazz/vim-colorschemes'
+
+" vim:ft=vim

@@ -1,0 +1,7 @@
+" python-mode - PyLint, Rope, Pydoc, breakpoints from box.
+
+Bundle 'klen/python-mode'
+
+let g:pymode_rope_goto_definition_bind = "<C-b>"
+
+" vim:ft=vim

@@ -1,0 +1,6 @@
+" vim-addon-mw-utils - interpret a file by function and cache file 
+"                      automatically
+
+Bundle 'MarcWeber/vim-addon-mw-utils'
+
+" vim:ft=vim"
